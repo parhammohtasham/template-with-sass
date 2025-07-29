@@ -4,7 +4,7 @@
 }
 :root {
   --hue: 227;
-  --set: 47%;
+  --sat: 47%;
   --primary-color: hsl(var(--hue), var(--sat), 52%);
   --primary-color-light: hsl(var(--hue), var(--sat), 85%);
   --primary-color-lighten: hsl(var(--hue), var(--sat), 80%);
@@ -85,12 +85,30 @@ h4 {
   gap: 1.5rem;
 }
 
+.section {
+  padding: 4rem 0 1rem 0;
+}
+.section__title {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-bottom: 1rem;
+}
+.section__title span {
+  color: var(--primary-color);
+}
+
+.svg__img {
+  width: 400px;
+  justify-self: center;
+}
+
 .button {
   display: inline-block;
   background-color: var(--primary-color);
   color: #fff;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 3rem;
+  transition: 0.5s;
 }
 .button:hover {
   background-color: var(--container-color);
@@ -145,7 +163,7 @@ h4 {
   font-size: 1.5rem;
   cursor: pointer;
 }
-.nav__link, .navlogo, .navtoggle {
+.nav__link, .nav__logo, .nav__toggle {
   color: var(--title-color);
 }
 
@@ -153,6 +171,52 @@ h4 {
   top: 4rem;
 }
 
+.home {
+  padding-top: 5rem;
+}
+.home__container {
+  row-gap: 2.5rem;
+}
+.home__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.home__title span {
+  color: var(--primary-color);
+}
+.home__description {
+  margin-bottom: 2rem;
+}
+
+.about__container {
+  gap: 2rem;
+}
+.about__info {
+  text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  .home__container, .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .svg__img {
+    width: 100%;
+  }
+  .home {
+    padding-top: 7rem;
+  }
+  .home__img {
+    order: 1;
+  }
+  .about__img {
+    order: -1;
+  }
+  .about__info {
+    text-align: left;
+  }
+}
 @media screen and (min-width: 767px) {
   .nav__list {
     flex-direction: row;
@@ -177,8 +241,15 @@ h4 {
   }
 }
 @media screen and (min-width: 992px) {
+  .container {
+    width: 95vw;
+  }
   .button__header {
     display: block;
+    padding: 0.3rem 1.5rem;
+  }
+  .svg__img {
+    width: 500px;
   }
 }
 

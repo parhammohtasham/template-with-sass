@@ -1,14 +1,36 @@
-@media screen and (min-width: 767px){
-  .nav{
-    &__list{
+@media screen and (min-width: 576px) {
+  .home__container, .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .svg__img{
+    width: 100%;
+  }
+  .home{
+    padding-top: 7rem;
+  }
+  .home__img{
+    order: 1;
+  }
+  .about__img{
+    order: -1;
+  }
+  .about__info{
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .nav {
+    &__list {
       flex-direction: row;
       column-gap: 2.5rem;
     }
-    &__toggle{
+    &__toggle {
       display: none;
     }
   }
-} 
+}
 
 @media screen and (min-width: 800px) {
   h1 {
@@ -25,7 +47,14 @@
   }
 }
 @media screen and (min-width: 992px) {
-  .button__header{
+  .container {
+    width: 95vw;
+  }
+  .button__header {
     display: block;
+    padding: 0.3rem 1.5rem;
+  }
+    .svg__img{
+    width: 500px;
   }
 }
