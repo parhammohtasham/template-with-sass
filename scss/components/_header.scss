@@ -52,3 +52,22 @@
 .show-menu{
     top: 4rem;
 }
+
+.scroll-header{
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.active-link{
+  position: relative;
+
+  &::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--title-color);
+    bottom: -0.75rem;
+    left: 45%;
+  }
+}
