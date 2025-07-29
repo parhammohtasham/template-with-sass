@@ -1,0 +1,16 @@
+.button{
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 3rem;
+
+    &:hover{
+        background-color: var(--container-color);
+        outline: 1px solid var(--primary-color);
+        color: var(--primary-color);
+    }
+    &__header{
+        display: none;
+    }
+}
