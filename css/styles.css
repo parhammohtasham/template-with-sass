@@ -280,6 +280,9 @@ h4 {
   gap: 0.5rem;
 }
 
+.contact {
+  padding: 5rem 0 3rem 0;
+}
 .contact__container {
   padding-bottom: 3rem;
 }
@@ -300,10 +303,53 @@ h4 {
   color: var(--text-color);
 }
 
+.footer {
+  background-color: var(--primary-color-lighten);
+  padding-bottom: 2rem;
+}
+.footer__container {
+  row-gap: 2rem;
+}
+.footer__logo, .footer__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.footer__logo {
+  margin-bottom: 0.75rem;
+  color: var(--title-color);
+}
+.footer__description, .footer__link {
+  font-size: 0.9rem;
+}
+.footer__link {
+  color: var(--title-color);
+}
+.footer__links {
+  display: grid;
+  row-gap: 0.5rem;
+}
+.footer__social {
+  display: flex;
+  column-gap: 1.5rem;
+}
+.footer__social-link {
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+.footer__copy {
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
 @media screen and (min-width: 576px) {
   .home__container, .about__container, .support__container, .seervices__container, .app__container, .contact__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+  }
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
   }
   .svg__img {
     width: 100%;
@@ -369,6 +415,12 @@ h4 {
   }
   .contact__container {
     grid-template-columns: 3fr 1.5fr 1.25fr;
+  }
+  .footer__container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .footer__social__link {
+    font-size: 1.4rem;
   }
 }
 

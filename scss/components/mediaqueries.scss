@@ -1,7 +1,10 @@
 @media screen and (min-width: 576px) {
-  .home__container, .about__container , .support__container , .seervices__container , .app__container , .contact__container{
+  .home__container, .about__container , .support__container , .seervices__container , .app__container , .contact__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+  }
+  .footer__container{
+    grid-template-columns: repeat(2, 1fr);
   }
   .svg__img{
     width: 100%;
@@ -73,5 +76,16 @@
   } 
   .contact__container{
     grid-template-columns: 3fr 1.5fr 1.25fr;
+  }
+  .footer{
+    &__container{
+      grid-template-columns: repeat(5,1fr);
+    }
+
+    &__social{
+      &__link{
+        font-size: 1.4rem;
+      }
+    }
   }
 }
