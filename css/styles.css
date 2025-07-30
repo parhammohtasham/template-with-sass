@@ -88,18 +88,30 @@ h4 {
 .section {
   padding: 4rem 0 1rem 0;
 }
-.section__title {
+.section__title, .section__title-center {
   font-size: 1.25rem;
   color: var(--title-color);
   margin-bottom: 1rem;
 }
-.section__title span {
+.section__title span, .section__title-center span {
   color: var(--primary-color);
+  display: flex;
+}
+.section__title-center {
+  text-align: center;
 }
 
 .svg__img {
   width: 400px;
   justify-self: center;
+}
+
+.container {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
 }
 
 .button {
@@ -117,6 +129,20 @@ h4 {
 }
 .button__header {
   display: none;
+}
+.button-link {
+  background-color: var(--container-color);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.button-link:hover {
+  background-color: var(--primary-color);
+  color: var(--container-color);
+}
+.button__flex {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
 }
 
 .header {
@@ -214,8 +240,68 @@ h4 {
   text-align: center;
 }
 
+.support__container {
+  gap: 2rem;
+}
+.support__info {
+  text-align: center;
+}
+
+.services__container {
+  padding-top: 1rem;
+}
+.services__info {
+  display: grid;
+  row-gap: 1rem;
+  background-color: var(--container-color);
+  box-shadow: 0px 2px 6px hsla(var(--hue), 100%, 15%, 0.15);
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+}
+.services__icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
+.app__container {
+  gap: 2rem;
+}
+.app__info {
+  text-align: center;
+}
+.app__description {
+  margin-bottom: 1.5rem;
+}
+.app__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.contact__container {
+  padding-bottom: 3rem;
+}
+.contact__description {
+  text-align: center;
+}
+.contact__info {
+  display: grid;
+  row-gap: 0.75rem;
+}
+.contact__address {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--title-color);
+}
+.contact__information {
+  font-weight: 400;
+  color: var(--text-color);
+}
+
 @media screen and (min-width: 576px) {
-  .home__container, .about__container {
+  .home__container, .about__container, .support__container, .seervices__container, .app__container, .contact__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
@@ -231,8 +317,11 @@ h4 {
   .about__img {
     order: -1;
   }
-  .about__info {
+  .about__info, .support__info, .contact__description, .app__title, .app__description, .contact__title {
     text-align: left;
+  }
+  .app__img {
+    order: -1;
   }
 }
 @media screen and (min-width: 767px) {
@@ -242,6 +331,9 @@ h4 {
   }
   .nav__toggle {
     display: none;
+  }
+  .app__buttons {
+    justify-content: start;
   }
 }
 @media screen and (min-width: 800px) {
@@ -268,6 +360,15 @@ h4 {
   }
   .svg__img {
     width: 500px;
+  }
+  .seervices__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .home__container, .about__container, .support__container, .app__container {
+    column-gap: 6rem;
+  }
+  .contact__container {
+    grid-template-columns: 3fr 1.5fr 1.25fr;
   }
 }
 
