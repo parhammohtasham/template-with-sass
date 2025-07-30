@@ -17,6 +17,27 @@
   --ff-primary: "vazir", sans-serif;
 }
 
+body.dark-theme {
+  --primary-light: hsl(var(--hue), var(--sat), 75%);
+  --title-color: hsl(var(--hue), 4%, 95%);
+  --text-color: hsl(var(--hue), 4%, 80%);
+  --body-color: hsl(var(--hue), 8%, 13%);
+  --container-color: hsl(var(--hue), 8%, 16%);
+}
+
+.change-theme {
+  position: absolute;
+  right: 1.5rem;
+  top: 2.1rem;
+  color: var(--title-color);
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.dark-theme .footer {
+  background-color: var(--container-color);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -343,6 +364,28 @@ h4 {
   color: var(--text-color);
 }
 
+.scrollup {
+  position: fixed;
+  background-color: var(--primary-color);
+  right: 2rem;
+  bottom: -20%;
+  padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+  border-radius: 0.25rem;
+  opacity: 0.8;
+  transition: 0.4rem;
+}
+.scrollup:hover {
+  opacity: 1;
+}
+.scrollup__icon {
+  font-size: 1.25rem;
+  color: var(--container-color);
+}
+
+.show-scroll {
+  bottom: 3rem;
+}
+
 @media screen and (min-width: 576px) {
   .home__container, .about__container, .support__container, .seervices__container, .app__container, .contact__container {
     grid-template-columns: repeat(2, 1fr);
@@ -377,6 +420,9 @@ h4 {
   }
   .nav__toggle {
     display: none;
+  }
+  .change-theme {
+    position: unset;
   }
   .app__buttons {
     justify-content: start;

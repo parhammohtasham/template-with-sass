@@ -1,4 +1,5 @@
 @use "config/variables";
+@use "theme/theme";
 @use "base/base";
 @use "layout/layout";
 @use "components/button";
@@ -10,4 +11,5 @@
 @use "components/app";
 @use "components/contact";
 @use "components/footer";
+@use "components/scroll";
 @use "components/mediaqueries";
